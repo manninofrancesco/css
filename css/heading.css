@@ -1,0 +1,67 @@
+.header {
+    height: 95vh;
+    /*95% of the screen'sviewport heigth*/
+    background-image: linear-gradient(to right bottom,
+            rgba(126, 213, 111, 0.8),
+            rgba(40, 180, 131, 0.8)),
+        url('../img/hero.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.heading-title-block {
+    position: absolute;
+    top: 40%;
+    /*this will start count from the parent (header) height and width*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*this will start count from the element width and height*/
+    color: #ffffff;
+    backface-visibility: hidden; /*avoid the blocks automatically moves on y axis (nobody knows why it happens sometimes)*/
+    text-align: center;
+}
+
+.heading-title{
+    margin-bottom: 20px;
+}
+
+.heading-title .title {
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 25px;
+    animation-name: moveFromBottom;
+    animation-duration: 1s;
+}
+
+.heading-title .subtitle {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    animation-name: moveFromBottom;
+    animation-duration: 1s;
+}
+
+@keyframes moveFromBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

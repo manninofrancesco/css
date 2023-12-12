@@ -1,0 +1,9 @@
+.btn-primary:link,
+.btn-primary:visited {
+    text-decoration: none;
+    background-color: #fff;
+    color: #777;
+    padding: 10px;
+    border-radius: 25px;
+    display: inline-block;
+}
